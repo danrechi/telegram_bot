@@ -17,7 +17,7 @@ conn = psycopg2.connect(database="timetable",
 cursor = conn.cursor()
 
 
-# Получение текущей даты для вычисления текущей недели и получение текущего дня недели
+
 week = int(datetime.datetime.utcnow().isocalendar()[1]) % 2
 if week == 0: next_week = 1
 else: next_week = 0
